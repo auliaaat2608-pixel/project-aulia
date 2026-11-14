@@ -1,0 +1,623 @@
+
+/* =================================
+   MATHLEARN - STYLE UTAMA
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --purple: #7654D6;
+  --purple-dark: #5738B5;
+  --yellow: #FFD95A;
+  --pink: #FF9BCB;
+  --mint: #A8EBD5;
+  --white: #FFFFFF;
+  --text: #30264D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #F5F1FF;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* HALAMAN LOGIN */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background:
+    radial-gradient(circle at 10% 15%, #FFE9A6 0, transparent 25%),
+    radial-gradient(circle at 90% 85%, #FBCDE5 0, transparent 25%),
+    linear-gradient(135deg, #F4EEFF, #E9E1FF);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 950px;
+  min-height: 550px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--white);
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(85, 55, 150, 0.15);
+}
+
+.login-illustration {
+  background: linear-gradient(145deg, #7654D6, #A78BFA);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+  text-align: center;
+  color: var(--white);
+}
+
+.mascot-star {
+  font-size: 125px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 10px 10px rgba(0,0,0,0.15));
+  animation: float 3s ease-in-out infinite;
+}
+
+.login-illustration h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.login-illustration p {
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 300px;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 55px 45px;
+}
+
+.login-content .welcome-label {
+  color: var(--purple);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.login-content h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.login-description {
+  font-size: 14px;
+  color: #817A91;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.login-content label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 15px 18px;
+  border: 2px solid #E8E1F7;
+  border-radius: 14px;
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.login-input:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 4px rgba(118, 84, 214, 0.1);
+}
+
+.start-button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--purple);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.start-button:hover {
+  background: var(--purple-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(118, 84, 214, 0.25);
+}
+
+.login-footer {
+  text-align: center;
+  color: #A29AAF;
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+/* ANIMASI */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* TAMPILAN HP */
+
+@media (max-width: 700px) {
+  .login-card {
+    grid-template-columns: 1fr;
+    max-width: 430px;
+  }
+
+  .login-illustration {
+    min-height: 240px;
+    padding: 25px;
+  }
+
+  .mascot-star {
+    font-size: 85px;
+  }
+
+  .login-illustration h2 {
+    font-size: 23px;
+  }
+
+  .login-content {
+    padding: 35px 25px;
+  }
+
+  .login-content h1 {
+    font-size: 27px;
+  }
+}
+
+/* =================================
+   DASHBOARD MATHLEARN
+================================= */
+
+.dashboard-page {
+  min-height: 100vh;
+  padding: 30px 6%;
+  background: #F5F1FF;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.dashboard-logo {
+  color: var(--purple);
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.student-profile {
+  background: white;
+  padding: 10px 18px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dashboard-welcome {
+  background: linear-gradient(120deg, #7654D6, #A78BFA);
+  color: white;
+  padding: 35px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.dashboard-welcome h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.dashboard-welcome p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.dashboard-mascot {
+  font-size: 85px;
+}
+
+.xp-card {
+  background: white;
+  padding: 22px;
+  border-radius: 20px;
+  margin-bottom: 35px;
+}
+
+.xp-card h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.xp-bar {
+  height: 13px;
+  background: #EAE5F5;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.xp-progress {
+  width: 0%;
+  height: 100%;
+  background: var(--yellow);
+  border-radius: 20px;
+}
+
+.dashboard-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.menu-card {
+  background: white;
+  padding: 25px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(85, 55, 150, 0.07);
+  transition: 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(85, 55, 150, 0.13);
+}
+
+.menu-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.menu-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.menu-card p {
+  color: #817A91;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .dashboard-page {
+    padding: 20px 5%;
+  }
+
+  .dashboard-welcome {
+    padding: 25px;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 22px;
+  }
+
+  .dashboard-mascot {
+    font-size: 60px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .menu-card {
+    padding: 18px 12px;
+  }
+
+  .menu-card h3 {
+    font-size: 14px;
+  }
+}
+
+/* ======================================
+   HALAMAN MATERI MATHLEARN
+====================================== */
+
+.materi-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.materi-card {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(87, 56, 181, 0.09);
+  border: 2px solid #eee8ff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.materi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(87, 56, 181, 0.15);
+}
+
+.materi-card h2 {
+  color: #5738B5;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.materi-card p,
+.materi-card li {
+  color: #514765;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.materi-card ul {
+  padding-left: 22px;
+}
+
+.contoh-box {
+  background: #fff8dc;
+  border-left: 5px solid #FFD95A;
+  padding: 18px;
+  border-radius: 14px;
+  margin-top: 18px;
+}
+
+.contoh-box h2,
+.contoh-box h3 {
+  color: #7654D6;
+}
+
+.rumus-box {
+  background: #eee8ff;
+  color: #5738B5;
+  padding: 22px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  margin: 18px 0;
+}
+
+#menuMateri {
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .materi-container {
+    grid-template-columns: 1fr;
+  }
+
+  .materi-card {
+    padding: 20px;
+  }
+}
+
+/* ======================================
+   GAME MATHLEARN - DESAIN PUZZLE
+====================================== */
+
+/* Kartu permainan */
+.dashboard-page:has(#pilihanKoefisien) .materi-card {
+  border: 2px solid #e5dcff;
+  box-shadow: 0 12px 30px rgba(87, 56, 181, 0.12);
+  border-radius: 25px;
+  padding: 30px;
+}
+
+/* Judul permainan */
+.dashboard-page:has(#pilihanKoefisien) .materi-card h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Angka yang harus diubah */
+.dashboard-page:has(#pilihanKoefisien) .rumus-box {
+  background: linear-gradient(135deg, #eee8ff, #fce8f4);
+  border: 2px solid #e3d7ff;
+  padding: 25px;
+  border-radius: 20px;
+  color: #5738B5;
+  font-size: 32px;
+  font-weight: 800;
+  animation: gamePop 0.5s ease;
+}
+
+/* Kotak koefisien dan pangkat */
+#kotakKoefisien,
+#kotakPangkat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5738B5;
+  font-weight: 800;
+  background: #f5f0ff !important;
+  border: 2px dashed #9575e8 !important;
+  border-radius: 16px !important;
+  min-height: 65px !important;
+  transition: 0.25s ease;
+}
+
+#kotakKoefisien:hover,
+#kotakPangkat:hover {
+  background: #eee5ff !important;
+  transform: scale(1.04);
+}
+
+/* Pilihan jawaban */
+#pilihanKoefisien,
+#pilihanPangkat {
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#pilihanKoefisien button,
+#pilihanPangkat button {
+  min-width: 85px;
+  padding: 13px 20px !important;
+  border-radius: 14px !important;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(87, 56, 181, 0.08);
+  transition: 0.2s ease;
+}
+
+#pilihanKoefisien button:hover,
+#pilihanPangkat button:hover {
+  background: #7654D6 !important;
+  color: white !important;
+  transform: translateY(-4px);
+  box-shadow: 0 7px 15px rgba(87, 56, 181, 0.2);
+}
+
+/* Tombol periksa dan lanjut */
+#aksiGame {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#aksiGame button {
+  min-width: 160px;
+  padding: 14px 22px !important;
+  border-radius: 14px !important;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+#aksiGame button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 15px rgba(87, 56, 181, 0.2);
+}
+
+/* Pesan jawaban */
+#pesanGame {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+/* Pembahasan */
+#pembahasanGame > div {
+  border: 1px solid #eee5ff;
+  border-radius: 18px !important;
+  margin-top: 15px;
+  line-height: 1.8;
+  animation: gamePop 0.4s ease;
+}
+
+#pembahasanGame h3 {
+  color: #5738B5;
+  margin-bottom: 8px;
+}
+
+#pembahasanGame p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Animasi permainan */
+@keyframes gamePop {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desain game pada HP */
+@media (max-width: 700px) {
+  .dashboard-page:has(#pilihanKoefisien) .materi-card {
+    padding: 20px 15px;
+  }
+
+  .dashboard-page:has(#pilihanKoefisien) .materi-card h2 {
+    font-size: 18px;
+  }
+
+  .dashboard-page:has(#pilihanKoefisien) .rumus-box {
+    font-size: 27px !important;
+  }
+
+  #kotakKoefisien,
+  #kotakPangkat {
+    min-height: 55px !important;
+    padding: 10px !important;
+    font-size: 19px !important;
+  }
+
+  #pilihanKoefisien button,
+  #pilihanPangkat button {
+    min-width: 75px;
+    padding: 11px 15px !important;
+  }
+
+  #aksiGame button {
+    width: 100%;
+  }
+}
