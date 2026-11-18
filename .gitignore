@@ -4,3 +4,6 @@ dist/
 .env
 .env.local
 .DS_Store
+node
+# File sementara Supabase
+supabase/.temp/

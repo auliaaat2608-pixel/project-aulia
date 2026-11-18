@@ -138,7 +138,6 @@ export function tampilkanGame(app, kembaliKeDashboard) {
 
   // ==========================================
   // SISTEM SUARA MATHLEARN
-  // Mendukung Chrome laptop dan browser HP
   // ==========================================
 
   let konteksAudio = null;
@@ -153,12 +152,10 @@ export function tampilkanGame(app, kembaliKeDashboard) {
         return;
       }
 
-      // Membuat AudioContext hanya satu kali.
       if (!konteksAudio) {
         konteksAudio = new AudioContext();
       }
 
-      // Memulai atau mengaktifkan audio setelah klik siswa.
       const mulaiSuara = () => {
         if (!konteksAudio) return;
 
@@ -205,7 +202,6 @@ export function tampilkanGame(app, kembaliKeDashboard) {
         });
       };
 
-      // Jika browser menangguhkan audio, aktifkan dahulu.
       if (konteksAudio.state === "suspended") {
         konteksAudio.resume()
           .then(() => {
@@ -371,8 +367,6 @@ export function tampilkanGame(app, kembaliKeDashboard) {
 
             <div class="dashboard-mascot">⭐</div>
           </section>
-
-          <!-- INFORMASI PERMAINAN -->
 
           <section style="
             background:white;
@@ -673,17 +667,11 @@ export function tampilkanGame(app, kembaliKeDashboard) {
           pilihanKoefisien === soal.koefisien &&
           pilihanPangkat === soal.pangkat;
 
-        // SUARA DIPUTAR SETELAH TOMBOL DIPENCET.
-        // Jawaban benar dan salah memiliki suara berbeda.
         mainkanSuara(benar);
 
         tombolPeriksa.disabled = true;
         tombolPeriksa.style.opacity = "0.5";
         tombolPeriksa.style.cursor = "not-allowed";
-
-        // ==========================================
-        // JAWABAN BENAR
-        // ==========================================
 
         if (benar) {
           poinLevel += 10;
@@ -709,10 +697,6 @@ export function tampilkanGame(app, kembaliKeDashboard) {
             `${progres.poin} ⭐`;
 
         } else {
-
-          // ==========================================
-          // JAWABAN SALAH
-          // ==========================================
 
           document.getElementById("pesanGame").textContent =
             "💡 Jawaban kamu BELUM TEPAT. Tidak apa-apa, tetap semangat belajar!";
@@ -750,10 +734,6 @@ export function tampilkanGame(app, kembaliKeDashboard) {
             </div>
           `;
         }
-
-        // ==========================================
-        // TOMBOL LANJUT
-        // ==========================================
 
         const tombolLanjut = buatTombol(
           nomorSoal === level.soal.length - 1
@@ -857,6 +837,5 @@ export function tampilkanGame(app, kembaliKeDashboard) {
     }
   }
 
-  // TAMPILKAN MENU GAME SAAT DIBUKA
   tampilkanMenuGame();
 }
